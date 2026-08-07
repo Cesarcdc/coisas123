@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+     
+    <style>
+        h1, p, label {
+             font-family:Arial, Helvetica, sans-serif
+        }   
+
+        .centralizar{
+            text-align:center;
+        }
+
+        main{
+            display: flex;
+            justify-content: center;
+        }
+
+        form{
+            background-color:rgb(25, 161, 25);
+            padding: 20%px;
+            width: 60%px;
+            display: grid;
+            border-radius: 8px;
+        }
+
+        img{
+            width: 20%;
+            display: block;
+            margin: auto;
+        }
+    </style> 
 </head>
 <body>
     <heaader>
         <img src="imagens/logo.png">
-        <h1>Serviços Propostos</h1>
-        <p>
-            Nos contate para ambientes arborizados, limpeza de terrenos, tratamento de plantas e muito mais com nossa equipe profissional.
+        <h1 class="centralizar">Serviços Propostos</h1>
+        <p class="centralizar">Nos contate para ambientes arborizados, limpeza de terrenos, tratamento de plantas e muito mais com nossa equipe profissional.
         </p>
     </heaader>
 
@@ -30,6 +58,20 @@
 
              <label for="confirmacao-senha">Confirmação da senha:</label>
             <input type="password" id="confirmacao-senha">
+
+            <p>Selecione os serviços disponíveis:</p>
+            <div>
+                <label><input type="checkbox">Paisagismo</label>
+                <label><input type="checkbox">Pedreiro</label>
+                <label><input type="checkbox">Mecânico</label>
+                <label><input type="checkbox">Encanador</label>
+                <label><input type="checkbox">Técnico</label>
+            </div>
+
+            <label for="comentario">Comentários sobre o atendimento:</label>
+            <textarea rows="4" id="comentario"></textarea>
+
+            <button type="submit">Enviar comentário</button>
         </form>
     </main>
 </body>
